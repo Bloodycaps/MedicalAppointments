@@ -2,17 +2,15 @@ import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
+        //showMenu();
+        Doctor alejandro = new Doctor("Alejandro", "Veterinario");
+        System.out.println(alejandro.name);
+        System.out.println(alejandro.speciality);
 
-        Doctor myDoctor = new Doctor("Danilo");
-        myDoctor.name = "David Fagua";
-        myDoctor.showName();
-        myDoctor.showId();
-        System.out.println(Doctor.id);
+        Patient patient = new Patient("David", "david@mail.com");
 
-        Doctor myDoctorDave = new Doctor();
-        myDoctor.showId();
-        System.out.println(Doctor.id);
+        patient.setHeight(54.6);
+        System.out.println(patient.getHeight());
 
-        showMenu();
     }
 }
