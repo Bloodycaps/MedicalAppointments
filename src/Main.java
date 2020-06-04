@@ -16,14 +16,8 @@ public class Main {
             System.out.println(aA.getDate().toLocaleString() + " " + aA.getTime());
         }
 
-        /*
-        System.out.println(alejandro.name);
-        System.out.println(alejandro.speciality);
+        Patient patient = new Patient("alejandra", "alejandra@mail.com");
 
-        Patient patient = new Patient("David", "david@mail.com");
-
-        patient.setHeight(54.6);
-        System.out.println(patient.getHeight());
-        */
+        System.out.println(patient);
     }
 }
