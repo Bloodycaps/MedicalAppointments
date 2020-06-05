@@ -7,7 +7,7 @@ public class Patient extends User {
     public Patient(String name, String email) {
         super(name, email);
     }
-    
+
     public String getBirthday() {
         return birthday;
     }
@@ -38,5 +38,15 @@ public class Patient extends User {
 
     public void setBlood(String blood) {
         this.blood = blood;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "birthday='" + birthday + '\'' +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", blood='" + blood + '\''
+                ;
     }
 }

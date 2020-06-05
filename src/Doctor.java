@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor extends User{
+public class Doctor extends User {
     //Atributos
     private String speciality;
 
@@ -12,22 +12,28 @@ public class Doctor extends User{
 
     //Comportamientos
 
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + speciality + "\nAvialable: " + availableAppointments.toString();
+    }
+
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
-    public void addAvailableAppointment(Date date, String time){
+    public void addAvailableAppointment(Date date, String time) {
         availableAppointments.add(new AvailableAppointment(date, time));
     }
 
-    public ArrayList<AvailableAppointment> getAvailableAppointments(){
+    public ArrayList<AvailableAppointment> getAvailableAppointments() {
         return availableAppointments;
     }
 
-    public static class AvailableAppointment{
+    public static class AvailableAppointment {
         private int id;
         private Date date;
-        private  String time;
+        private String time;
 
-        public AvailableAppointment(Date date, String time){
+        public AvailableAppointment(Date date, String time) {
             this.date = date;
             this.time = time;
         }
@@ -54,6 +60,11 @@ public class Doctor extends User{
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "\nDate: " + date.toLocaleString() + "\nTime: " + time;
         }
     }
 
