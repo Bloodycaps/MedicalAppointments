@@ -3,7 +3,7 @@ package model;
 import javax.print.Doc;
 import java.util.Date;
 
-public class ApointmentDoctor {
+public class ApointmentDoctor implements ISchedulable {
     private int id;
     private Patient patient;
     private Doctor doctor;
@@ -48,5 +48,10 @@ public class ApointmentDoctor {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    @Override
+    public void schedule(Date date, String time) {
+
     }
 }
